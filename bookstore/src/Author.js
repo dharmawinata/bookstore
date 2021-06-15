@@ -3,10 +3,10 @@ import ListAuthor from './ListAuthor'
 
 const Author = () => {
    
-    const [authors, setAuthors] = useState(null)
+    const [authors, setAuthors] = useState([])
     
     useEffect(() => {
-        fetch('http://localhost:3000/authorss')
+        fetch('http://localhost:3000/authors')
         .then(res => {
             return res.json()
         })
@@ -17,7 +17,6 @@ const Author = () => {
 
     return (
         <div className="list-authors">
-            <h2>List Author</h2>
             {authors && <ListAuthor authors={authors}/>}
         </div>
     )

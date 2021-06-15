@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import { Table } from 'react-bootstrap'
 
 const ListAuthor = ({authors}) => {
@@ -6,7 +6,13 @@ const ListAuthor = ({authors}) => {
     return (
         <div className="author mt-3">
             <div className="author-preview">
-                
+                <Link to='/'>kembali ke Homepage</Link>
+                <h2 className='text-center'>List Author</h2>
+                <Link to='/addAuthor'>
+                    <div className="btn btn-sm btn-outline-success mb-3">
+                        Add Author
+                    </div>
+                </Link>
                     <Table striped bordered hover>
                     <thead>
                         <tr>

@@ -1,15 +1,28 @@
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Home';
 import Author from './Author';
+import AddAuthor from './AddAuthor';
 
 function App() {
   return (
-    <div className="App">
-      <div className="container text-center mt-3">
-       <Home/>
-       <Author/>
+    <Router>
+      <div className="App">
+        <div className="container mt-3">
+          <Switch>
+            <Route exact path='/'>
+              <Home/>
+            </Route>
+            <Route path='/authors'>
+              <Author/>
+            </Route>
+            <Route path='/addAuthor'>
+              <AddAuthor/>
+            </Route>
+          </Switch>
+          </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
