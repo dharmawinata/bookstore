@@ -1,0 +1,24 @@
+/* .links {
+  margin-left: 5px;
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.links a {
+  display: inline-block;
+  background-color: brown;
+  color: white;
+  padding: 8px;
+  margin-left: 10px;
+  width: 80px;
+}
+
+.links a:hover {
+  text-decoration: none;
+}
